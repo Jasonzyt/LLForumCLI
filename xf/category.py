@@ -1,0 +1,22 @@
+class Category:
+    def __init__(self, raw_data: dict):
+        self.raw = raw_data
+        self.allow_commercial_external = raw_data.get('allow_commercial_external', None)
+        self.allow_external = raw_data.get('allow_external', None)
+        self.allow_fileless = raw_data.get('allow_fileless', None)
+        self.allow_local = raw_data.get('allow_local', None)
+        self.can_add = raw_data.get('can_add', None)
+        self.can_upload_images = raw_data.get('can_upload_images', None)
+        self.description = raw_data.get('description', None)
+        self.display_order = raw_data.get('display_order', None)
+        self.enable_support_url = raw_data.get('enable_support_url', None)
+        self.enable_versioning = raw_data.get('enable_versioning', None)
+        self.last_resource_id = raw_data.get('last_resource_id', None)
+        self.last_resource_title = raw_data.get('last_resource_title', None)
+        self.last_update = raw_data.get('last_update', None)
+        self.min_tags = raw_data.get('min_tags', None)
+        self.parent_category_id = raw_data.get('parent_category_id', None)
+        self.resource_category_id = raw_data.get('resource_category_id', None)
+        self.resource_count = raw_data.get('resource_count', None)
+        self.title = raw_data.get('title', None)
+        self.view_url = raw_data.get('view_url', None)

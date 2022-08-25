@@ -1,0 +1,43 @@
+from xf.forum import Forum
+from xf.user import User
+
+
+class Thread:
+    def __init__(self, raw_data: dict):
+        self.raw = raw_data
+        self.can_edit = raw_data.get('can_edit', None)
+        self.can_edit_tags = raw_data.get('can_edit_tags', None)
+        self.can_hard_delete = raw_data.get('can_hard_delete', None)
+        self.can_reply = raw_data.get('can_reply', None)
+        self.can_soft_delete = raw_data.get('can_soft_delete', None)
+        self.can_view_attachments = raw_data.get('can_view_attachments', None)
+        self.custom_fields = raw_data.get('custom_fields', None)
+        self.discussion_open = raw_data.get('discussion_open', None)
+        self.discussion_state = raw_data.get('discussion_state', None)
+        self.discussion_type = raw_data.get('discussion_type', None)
+        self.first_post_id = raw_data.get('first_post_id', None)
+        self.first_post_reaction_score = raw_data.get('first_post_reaction_score', None)
+        self.forum = Forum(raw_data.get("Forum"))
+        self.highlighted_post_ids = raw_data.get('highlighted_post_ids', None)
+        self.is_first_post_pinned = raw_data.get('is_first_post_pinned', None)
+        self.is_unread = raw_data.get('is_unread', None)
+        self.is_watching = raw_data.get('is_watching', None)
+        self.last_post_date = raw_data.get('last_post_date', None)
+        self.last_post_id = raw_data.get('last_post_id', None)
+        self.last_post_user_id = raw_data.get('last_post_user_id', None)
+        self.last_post_username = raw_data.get('last_post_username', None)
+        self.node_id = raw_data.get('node_id', None)
+        self.post_date = raw_data.get('post_date', None)
+        self.prefix = raw_data.get('prefix', None)
+        self.prefix_id = raw_data.get('prefix_id', None)
+        self.reply_count = raw_data.get('reply_count', None)
+        self.sticky = raw_data.get('sticky', None)
+        self.tags = raw_data.get('tags', None)
+        self.thread_id = raw_data.get('thread_id', None)
+        self.title = raw_data.get('title', None)
+        self.user = User(raw_data.get('User'))
+        self.user_id = raw_data.get('user_id', None)
+        self.username = raw_data.get('username', None)
+        self.view_count = raw_data.get('view_count', None)
+        self.view_url = raw_data.get('view_url', None)
+        self.visitor_post_count = raw_data.get('visitor_post_count', None)
